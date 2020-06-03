@@ -1,0 +1,28 @@
+---
+- hosts: all
+
+  tasks:
+    - name: Ensure svcawxtest group exists
+      group:
+        name: svcawxrec
+        state: present
+
+    - name: Ensure svcawxtest user exists
+      user:
+        name: svcawxrec
+        groups: svcawxrec
+        state: present
+
+    - name: authorized_key
+      authorized_key:
+        user: svcawxrec
+        key: "{{ lookup('file', '/home/philippe/echanges/Ansible/deploy/files/id_rsa.pub') }}"
+
+    - name: sudo
+      copy: 
+        src: svcawxrec
+        dest: /etc/sudoers.d/
+        owner: root
+        group: root
+        mode: "0440"
+        validate: /usr/sbin/visudo -csf %s

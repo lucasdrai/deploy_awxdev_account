@@ -1,0 +1,4 @@
+# Droits d'administration pour AWX de recette
+Defaults:svcawxtest !requiretty
+svcawxtest ALL = (ALL) ALL
+
