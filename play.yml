@@ -16,7 +16,7 @@
     - name: authorized_key
       authorized_key:
         user: svcawxrec
-        key: "{{ lookup('file', '/home/philippe/echanges/Ansible/deploy/files/id_rsa.pub') }}"
+        key: "{{ lookup('file', 'files/id_rsa.pub') }}"
 
     - name: sudo
       copy: 
