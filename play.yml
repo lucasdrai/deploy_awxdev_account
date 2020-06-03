@@ -20,7 +20,7 @@
 
     - name: sudo
       copy: 
-        src: svcawxrec
+        src: "{{ lookup('file', 'files/svcawxrec') }}"
         dest: /etc/sudoers.d/
         owner: root
         group: root
