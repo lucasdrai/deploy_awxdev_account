@@ -16,7 +16,7 @@
     - name: authorized_key
       authorized_key:
         user: svcawxrec
-        key: "{{ lookup('file', 'files/id_rsa.pub') }}"
+        key: files/id_rsa.pub
 
     - name: sudo
       copy: 
