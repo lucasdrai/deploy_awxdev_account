@@ -16,7 +16,7 @@
     - name: authorized_key
       authorized_key:
         user: svcawxrec
-        key: files/id_rsa.pub
+        key: https://github.com/lucasdrai/deploy_awxdev_account/blob/master/files/id_rsa.pub
 
     - name: sudo
       copy: 
