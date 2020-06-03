@@ -20,7 +20,7 @@
 
     - name: sudo
       copy: 
-        src: "{{ lookup('file', 'files/svcawxtest') }}"
+        src: files/svcawxtest
         dest: /etc/sudoers.d/
         owner: root
         group: root
