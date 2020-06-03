@@ -4,23 +4,23 @@
   tasks:
     - name: Ensure svcawxtest group exists
       group:
-        name: svcawxrec
+        name: svcawxtest
         state: present
 
     - name: Ensure svcawxtest user exists
       user:
-        name: svcawxrec
-        groups: svcawxrec
+        name: svcawxtest
+        groups: svcawxtest
         state: present
 
     - name: authorized_key
       authorized_key:
-        user: svcawxrec
+        user: svcawxtest
         key: "{{ lookup('file', 'files/id_rsa.pub') }}"
 
     - name: sudo
       copy: 
-        src: "{{ lookup('file', 'files/svcawxrec') }}"
+        src: "{{ lookup('file', 'files/svcawxtest') }}"
         dest: /etc/sudoers.d/
         owner: root
         group: root
