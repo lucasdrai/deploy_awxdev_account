@@ -1,3 +1,3 @@
 # Droits d'administration pour le compte idm de l'AWX de recette
-Defaults:svcawxidm !requiretty
-svcawxidm ALL = (ALL) ALL
+Defaults:svcawxrecidm !requiretty
+svcawxrecidm ALL = (ALL) ALL

@@ -1,13 +1,13 @@
 users:
   - name: svcawxrecbw
     public_key: files/ssh_keys_svcaccounts_awx/rec_svcawxrecbw/id_rsa.pub
-    sudo_file: files/ssh_keys_svcaccounts_awx/rec_svcawxrecbw/svcawxbw
+    sudo_file: files/ssh_keys_svcaccounts_awx/rec_svcawxrecbw/svcawxrecbw
   - name: svcawxrecidm
     public_key: files/ssh_keys_svcaccounts_awx/rec_svcawxrecidm/id_rsa.pub
-    sudo_file: files/ssh_keys_svcaccounts_awx/rec_svcawxrecidm/svcawxidm
+    sudo_file: files/ssh_keys_svcaccounts_awx/rec_svcawxrecidm/svcawxrecidm
   - name: svcawxreciul
     public_key: files/ssh_keys_svcaccounts_awx/rec_svcawxreciul/id_rsa.pub
-    sudo_file: files/ssh_keys_svcaccounts_awx/rec_svcawxreciul/svcawxiul
+    sudo_file: files/ssh_keys_svcaccounts_awx/rec_svcawxreciul/svcawxreciul
   - name: svcawxrecreseau
     public_key: files/ssh_keys_svcaccounts_awx/rec_svcawxrecreseau/id_rsa.pub
-    sudo_file: files/ssh_keys_svcaccounts_awx/rec_svcawxrecreseau/svcawxreseau
+    sudo_file: files/ssh_keys_svcaccounts_awx/rec_svcawxrecreseau/svcawxrecreseau
