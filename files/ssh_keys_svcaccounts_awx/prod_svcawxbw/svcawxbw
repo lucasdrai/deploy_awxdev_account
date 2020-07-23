@@ -1,0 +1,3 @@
+# Droits d'administration pour le compte BW de l'AWX de recette
+Defaults:svcawxbw !requiretty
+svcawxbw ALL = (ALL) ALL

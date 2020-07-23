@@ -1,0 +1,3 @@
+# Droits d'administration pour le compte iul de l'AWX de recette
+Defaults:svcawxiul !requiretty
+svcawxiul ALL = (ALL) ALL

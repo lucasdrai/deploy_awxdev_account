@@ -1,0 +1,13 @@
+users:
+  - name: svcawxbw
+    public_key: files/ssh_keys_svcaccounts_awx/prod_svcawxbw/id_rsa.pub
+    sudo_file: files/ssh_keys_svcaccounts_awx/prod_svcawxbw/svcawxbw
+  - name: svcawxidm
+    public_key: files/ssh_keys_svcaccounts_awx/prod_svcawxidm/id_rsa.pub
+    sudo_file: files/ssh_keys_svcaccounts_awx/prod_svcawxidm/svcawxidm
+  - name: svcawxiul
+    public_key: files/ssh_keys_svcaccounts_awx/prod_svcawxiul/id_rsa.pub
+    sudo_file: files/ssh_keys_svcaccounts_awx/prod_svcawxiul/svcawxiul
+  - name: svcawxreseau
+    public_key: files/ssh_keys_svcaccounts_awx/prod_svcawxreseau/id_rsa.pub
+    sudo_file: files/ssh_keys_svcaccounts_awx/prod_svcawxreseau/svcawxreseau
