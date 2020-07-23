@@ -1,0 +1,34 @@
+---
+- hosts: all
+  vars_files:
+    - "vars/{{ env }}_vars.yml"
+
+  tasks:
+    - name: Ensure user group exists
+      group:
+        name: "{{ item.name }}"
+        state: present
+      loop: "{{ users }}"
+
+    - name: Ensure user exists
+      user:
+        name: "{{ item.name }}"
+        groups: "{{ item.name }}"
+        state: present
+      loop: "{{ users }}"
+
+    - name: put key in authorized keys
+      authorized_key:
+        user: "{{ item.name }}"
+        key: "{{ lookup('file', item.public_key) }}"
+      loop: "{{ users }}"
+
+    - name: sudo
+      copy:
+        src: "{{ item.sudo_file }}"
+        dest: /etc/sudoers.d/
+        owner: root
+        group: root
+        mode: "0440"
+        validate: /usr/sbin/visudo -csf %s
+      loop: "{{ users }}"
